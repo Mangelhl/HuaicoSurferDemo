@@ -24,16 +24,7 @@ public class DestruyePrefaps : MonoBehaviour
                 Destroy(child.gameObject);
             }
         }
-
-        if (other.gameObject.CompareTag("Realentizacion"))
-        {
-            Destroy(other.gameObject);
-
-            foreach (Transform child in other.transform)
-            {
-                Destroy(child.gameObject);
-            }
-        }
+        
         if (other.gameObject.CompareTag("Escudo"))
         {
             Destroy(other.gameObject);

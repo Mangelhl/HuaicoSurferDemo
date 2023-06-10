@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 1542023648710088179}
   - component: {fileID: 1542023648710088178}
   m_Layer: 0
-  m_Name: Prefap
+  m_Name: SueloPrefab
   m_TagString: Plano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -336,6 +336,7 @@ MonoBehaviour:
   TiempoInicio: 0
   paraObstaculos: 0
   Aleatoriedad: 1
+  gm: {fileID: 0}
 --- !u!114 &1542023648789955671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,6 +356,7 @@ MonoBehaviour:
   TiempoInicio: 0
   paraObstaculos: 0
   Aleatoriedad: 0
+  gm: {fileID: 0}
 --- !u!1 &1542023648917260091
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +532,7 @@ MonoBehaviour:
   TiempoInicio: 0
   paraObstaculos: 0
   Aleatoriedad: 1
+  gm: {fileID: 0}
 --- !u!114 &1542023649935770018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,6 +552,7 @@ MonoBehaviour:
   TiempoInicio: 0
   paraObstaculos: 0
   Aleatoriedad: 0
+  gm: {fileID: 0}
 --- !u!1 &1542023649941511144
 GameObject:
   m_ObjectHideFlags: 0
