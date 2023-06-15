@@ -630,12 +630,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6693638467251221532}
   - component: {fileID: 6580126625081905346}
+  - component: {fileID: 4548381662588998022}
   - component: {fileID: -1984599792305233298}
   - component: {fileID: -3419954271795107230}
   - component: {fileID: -692860043974531277}
   m_Layer: 0
   m_Name: hombre_1_base
-  m_TagString: Persona
+  m_TagString: Civil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -669,6 +670,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.4968362, y: 7.9718447, z: 1.4985695}
   m_Center: {x: 0.019928277, y: 1.0999999, z: -0.34000003}
+--- !u!114 &4548381662588998022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318343655683157670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddbe3eff33805a478e7c4292f2dfbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
 --- !u!54 &-1984599792305233298
 Rigidbody:
   m_ObjectHideFlags: 0

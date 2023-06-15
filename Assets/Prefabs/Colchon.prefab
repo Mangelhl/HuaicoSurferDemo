@@ -95,6 +95,8 @@ GameObject:
   - component: {fileID: 7910902061090401703}
   - component: {fileID: 7910902061090401702}
   - component: {fileID: 7910902061090401697}
+  - component: {fileID: 5824342861788275818}
+  - component: {fileID: -4821072363452633131}
   m_Layer: 0
   m_Name: Colchon
   m_TagString: Player
@@ -133,11 +135,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VelocidadHorizontal: 80
   velocidadOriniginal: 80
+  iman: 0
   Turbo: 0
   escudo: 0
   invulnerable: 0
   Velocidad: {fileID: 0}
   Escudo: {fileID: 7910902061921117987}
+  Iman: {fileID: 0}
 --- !u!54 &7910902061090401702
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -167,6 +171,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.5512586, y: 1.7485263, z: 4.7397213}
   m_Center: {x: -0.04938245, y: -0.082627654, z: -0.054509282}
+--- !u!114 &5824342861788275818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7910902061090401696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb7392617169674f8659aa728cb6b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4821072363452633131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7910902061090401696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b100dfff560ba494eafbd4814ca71296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SM: {fileID: 0}
+  ScoreN: 0
+  ScoreMax: 0
 --- !u!1 &7910902061921117987
 GameObject:
   m_ObjectHideFlags: 0
