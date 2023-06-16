@@ -27,26 +27,25 @@ public class MejorasTienda : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo1 && Infra == 0)
         {
-            Infra += 1;
             ML.RestarLucas(Costo1);
+            Infra += 1;
             Botones[0].SetActive(false);
         }
     }
     public void Infraestructura2()
     { if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo2 && Infra == 1)
         {
-            Infra += 1;
             ML.RestarLucas(Costo2);
+            Infra += 1;
             Botones[1].SetActive(false);
         } }
     public void Infraestructura3() 
     { 
         if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo3 && Infra == 2)
         {
-           
-            Botones[2].SetActive(false);
-            Infra += 1;
             ML.RestarLucas(Costo3);
+            Infra += 1;
+            Botones[2].SetActive(false);
         }
      }
 
@@ -54,22 +53,22 @@ public class MejorasTienda : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo1 && Ambi == 0)
         {
-            Ambi += 1;
             ML.RestarLucas(Costo1);
+            Ambi += 1;
             Botones[6].SetActive(false);
         } }
     public void Ambientación2() {
         if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo2 && Ambi == 1)
         {
-            Ambi += 1;
             ML.RestarLucas(Costo2);
+            Ambi += 1;
             Botones[7].SetActive(false);
         } }
     public void Ambientación3() { 
         if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo3 && Ambi == 2)
         {
-            Ambi += 1;
             ML.RestarLucas(Costo3);
+            Ambi += 1;
             Botones[8].SetActive(false);
         }
     }
@@ -77,16 +76,17 @@ public class MejorasTienda : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo1 && Prev == 0)
         {
-            Prev += 1;
             ML.RestarLucas(Costo1);
+            Prev += 1;
             Botones[3].SetActive( false);
+
         } }
     public void Prevención2()
     {
         if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo2 && Prev == 1)
         {
-            Prev += 1;
             ML.RestarLucas(Costo2);
+            Prev += 1;
             Botones[4].SetActive(false);
         }
     }
@@ -94,8 +94,8 @@ public class MejorasTienda : MonoBehaviour
             
         if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo3 && Prev == 2)
         {
-            Prev += 1;
             ML.RestarLucas(Costo3);
+            Prev += 1;
             Botones[5].SetActive(false);
         }
     }

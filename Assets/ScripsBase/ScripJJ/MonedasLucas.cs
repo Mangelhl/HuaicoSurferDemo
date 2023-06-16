@@ -43,6 +43,7 @@ public int ScoreN,ScoreMax;
     public void RestarLucas(int DR)
     {
         PlayerPrefs.SetInt("Puntaje Maximo", PlayerPrefs.GetInt("Puntaje Maximo", 0) - DR);
+        SM.text = (PlayerPrefs.GetInt("Puntaje Maximo", 0)).ToString();
     }
 private void OnTriggerEnter(Collider collision)
 {
