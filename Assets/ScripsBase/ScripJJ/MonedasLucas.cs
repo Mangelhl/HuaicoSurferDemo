@@ -48,11 +48,11 @@ private void OnTriggerEnter(Collider collision)
 {
     if (collision.tag == "Civil")
     {
-            
-        Destroy(collision.gameObject);
-        SM.text = (PlayerPrefs.GetInt("Puntaje Maximo", 0)).ToString();
-
             PlayerPrefs.SetInt("Puntaje Maximo", PlayerPrefs.GetInt("Puntaje Maximo", 0) + 1);
+            Destroy(collision.gameObject);
+            SM.text = (PlayerPrefs.GetInt("Puntaje Maximo", 0)).ToString();
+
+            
         }
 }
 }
