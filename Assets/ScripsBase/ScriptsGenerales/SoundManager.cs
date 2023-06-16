@@ -1,6 +1,7 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class SoundManager : MonoBehaviour
         }
 
 
-        DontDestroyOnLoad(gameObject);
+       
 
         foreach (Sound s in sounds)
         {
@@ -35,7 +36,19 @@ public class SoundManager : MonoBehaviour
     }
     void Start()
     {
-        Play("Theme");
+
+        string actualSceneName = SceneManager.GetActiveScene().name;
+
+
+            if (actualSceneName == "Menu") 
+            { 
+              Play ("MenuTheme");
+            }
+        if (actualSceneName == "SampleScene") 
+            {
+            Play("InGameMusic");
+            }
+
     }
   
     public void Play(string name)
