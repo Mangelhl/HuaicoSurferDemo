@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542023648643551867}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: 0, z: -4.5}
+  m_LocalPosition: {x: -3.94, y: 0, z: -4.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -223,10 +223,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed209eb40d6e278489744b30af1026ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidadX: 15
-  cantidadZ: 15
-  espacioX: 2
-  espacioZ: 2
+  cantidadX: 6
+  cantidadZ: 8
+  espacioX: 0.8
+  espacioZ: 0.8
   origen: {x: 0, y: 0, z: 0}
   puntoInicioArrays: {fileID: 1542023649941511144}
 --- !u!114 &1542023648789955668
@@ -247,7 +247,7 @@ MonoBehaviour:
   - {fileID: 3991055878249258179, guid: da2bbaa57c0967b459d252f6077439bb, type: 3}
   - {fileID: 764206734129588742, guid: af1da5a8a335f384683634cd17159164, type: 3}
   - {fileID: 8369536980387389466, guid: bb1954700a110a14ba27a3a4da657b23, type: 3}
-  cantidadInstancias: 7
+  cantidadInstancias: 5
   Tiempo: 0
   TiempoInicio: 0
   paraObstaculos: 0
@@ -267,11 +267,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 7992902223034654788, guid: 9b0b26a938857d545b03bb758a2599a7, type: 3}
-  cantidadInstancias: 40
+  cantidadInstancias: 20
   Tiempo: 0
   TiempoInicio: 0
   paraObstaculos: 0
-  Aleatoriedad: 0
+  Aleatoriedad: 1
   gm: {fileID: 0}
 --- !u!1 &1542023649935770020
 GameObject:
@@ -387,12 +387,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed209eb40d6e278489744b30af1026ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidadX: 15
-  cantidadZ: 15
-  espacioX: 2
-  espacioZ: 2
+  cantidadX: 8
+  cantidadZ: 8
+  espacioX: 0.8
+  espacioZ: 0.8
   origen: {x: 0, y: 0, z: 0}
-  puntoInicioArrays: {fileID: 1542023648643551867}
+  puntoInicioArrays: {fileID: 1542023649941511144}
 --- !u!114 &1542023649935770019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,7 +411,7 @@ MonoBehaviour:
   - {fileID: 3991055878249258179, guid: da2bbaa57c0967b459d252f6077439bb, type: 3}
   - {fileID: 764206734129588742, guid: af1da5a8a335f384683634cd17159164, type: 3}
   - {fileID: 8369536980387389466, guid: bb1954700a110a14ba27a3a4da657b23, type: 3}
-  cantidadInstancias: 7
+  cantidadInstancias: 5
   Tiempo: 0
   TiempoInicio: 0
   paraObstaculos: 0
@@ -431,11 +431,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 7992902223034654788, guid: 9b0b26a938857d545b03bb758a2599a7, type: 3}
-  cantidadInstancias: 40
+  cantidadInstancias: 20
   Tiempo: 0
   TiempoInicio: 0
   paraObstaculos: 0
-  Aleatoriedad: 0
+  Aleatoriedad: 1
   gm: {fileID: 0}
 --- !u!1 &1542023649941511144
 GameObject:
@@ -461,7 +461,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542023649941511144}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: 0, z: -4.5}
+  m_LocalPosition: {x: -4.3, y: 0, z: -4.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
