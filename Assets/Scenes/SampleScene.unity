@@ -6017,7 +6017,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652339575673}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &559573540
 SpriteRenderer:
@@ -6378,6 +6378,16 @@ PrefabInstance:
       propertyPath: espacioX
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1542023649935770016, guid: 582966011e1f91e4ca92ed8f113b786b,
+        type: 3}
+      propertyPath: cantidadX
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542023649935770016, guid: 582966011e1f91e4ca92ed8f113b786b,
+        type: 3}
+      propertyPath: cantidadZ
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 582966011e1f91e4ca92ed8f113b786b, type: 3}
 --- !u!4 &652023116 stripped
@@ -6416,7 +6426,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652339575673}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &683896677
 SpriteRenderer:
@@ -12463,7 +12473,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652339575673}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1465366061
 SpriteRenderer:
@@ -12938,7 +12948,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652339575673}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1856928268
 SpriteRenderer:
