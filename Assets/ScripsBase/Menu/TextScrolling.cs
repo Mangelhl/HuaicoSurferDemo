@@ -38,6 +38,6 @@ public class TextScrolling : MonoBehaviour
         }
 
         transform.localPosition = new Vector3(newPosition, transform.localPosition.y, transform.localPosition.z);
+        
     }
-    
 }
