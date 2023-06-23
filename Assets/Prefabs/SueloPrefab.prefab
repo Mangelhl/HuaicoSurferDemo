@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cantidadX: 6
-  cantidadZ: 8
+  cantidadZ: 6
   espacioX: 0.8
   espacioZ: 0.8
   origen: {x: 0, y: 0, z: 0}
@@ -387,8 +387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed209eb40d6e278489744b30af1026ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidadX: 8
-  cantidadZ: 8
+  cantidadX: 7
+  cantidadZ: 7
   espacioX: 0.8
   espacioZ: 0.8
   origen: {x: 0, y: 0, z: 0}

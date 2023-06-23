@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2283658071566236682}
-  - component: {fileID: 2507340037454088798}
   - component: {fileID: -2660035212568901652}
   - component: {fileID: 5482097679796348673}
+  - component: {fileID: -9203747658611982245}
   m_Layer: 0
   m_Name: calamina(2)
   m_TagString: Obstaculo
@@ -35,20 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2507340037454088798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511800202252052144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88fc86e633fb705409737fbff0e7f994, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VelocidadMinima: 240
-  VelocidadMaxima: 300
 --- !u!54 &-2660035212568901652
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78,6 +64,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.094698, y: 10.247547, z: 2.65}
   m_Center: {x: 0.06615734, y: 0.03, z: 0.02}
+--- !u!114 &-9203747658611982245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511800202252052144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc9034ce68e687498299d28ca32f822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VelocidadEscenario: 0
 --- !u!1 &2662096190689942586
 GameObject:
   m_ObjectHideFlags: 0

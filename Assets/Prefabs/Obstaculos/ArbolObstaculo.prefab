@@ -93,8 +93,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1591912243414960948}
   - component: {fileID: 6739550196814432780}
-  - component: {fileID: -851670616639410033}
   - component: {fileID: 4805898488414337790}
+  - component: {fileID: 5309965719304370481}
   m_Layer: 0
   m_Name: ArbolObstaculo
   m_TagString: Obstaculo
@@ -135,18 +135,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 118
   m_CollisionDetection: 1
---- !u!114 &-851670616639410033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3612857130825443165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88fc86e633fb705409737fbff0e7f994, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &4805898488414337790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -160,6 +148,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.749688, y: 5.1408367, z: 28.078417}
   m_Center: {x: 0.73864925, y: 0.3027606, z: -5.2817903}
+--- !u!114 &5309965719304370481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3612857130825443165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc9034ce68e687498299d28ca32f822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VelocidadEscenario: 0
 --- !u!1 &5823443822902294573
 GameObject:
   m_ObjectHideFlags: 0

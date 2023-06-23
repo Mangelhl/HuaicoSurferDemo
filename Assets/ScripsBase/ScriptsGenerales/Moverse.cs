@@ -62,7 +62,7 @@ public class Moverse : MonoBehaviour
 
         if (Turbo)
         {
-            Time.timeScale = 3;
+            Time.timeScale = 2;
             Velocidad.SetActive(true);
            
         }
