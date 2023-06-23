@@ -26,8 +26,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         move = FindObjectOfType<Moverse>();
-        
-        
     }
 
     // Update is called once per frame
@@ -46,7 +44,6 @@ public class GameManager : MonoBehaviour
                 VelocidadGeneral = VelocidadGeneral + 25;
                 move.VelocidadHorizontal = move.VelocidadHorizontal + 2;
                 move.velocidadOriniginal = move.velocidadOriniginal + 2;
-                
             }
         
     }
