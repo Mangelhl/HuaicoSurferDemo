@@ -101,10 +101,10 @@ public class Moverse : MonoBehaviour
         {
             StartCoroutine(EscuDo());
         }
-        if (other.gameObject.CompareTag("Escudo"))
+       /* if (other.gameObject.CompareTag("Escudo"))
         {
             escudo = true;
-        }
+        }*/
         if (other.gameObject.CompareTag("Turbo") && invulnerable == false)
         {
             StartCoroutine(turBo());

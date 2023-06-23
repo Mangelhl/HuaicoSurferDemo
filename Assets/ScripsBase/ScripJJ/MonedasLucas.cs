@@ -29,10 +29,9 @@ public int ScoreN,ScoreMax;
     
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (PlayerPrefs.GetInt("Puntaje Maximo", 0) < 75)
-            {
-                PlayerPrefs.SetInt("Puntaje Maximo", PlayerPrefs.GetInt("Puntaje Maximo", 0 + 75));
-            }
+           
+                PlayerPrefs.SetInt("Puntaje Maximo", PlayerPrefs.GetInt("Puntaje Maximo", 0) + 75);
+            
         }
 
         if (Input.GetKeyDown(KeyCode.E))

@@ -21,7 +21,9 @@ public class MejorasTienda : MonoBehaviour
         {
 
         }
-       
+        Debug.Log("INFRA"+Infra);
+        Debug.Log("Ambi" + Ambi);
+        Debug.Log("Preve" + Prev);
     }
     public void Infraestructura1()
     {
@@ -78,7 +80,7 @@ public class MejorasTienda : MonoBehaviour
         {
             ML.RestarLucas(Costo1);
             Prev += 1;
-            Botones[3].SetActive( false);
+            Botones[3].SetActive(false);
 
         } }
     public void Prevención2()

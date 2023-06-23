@@ -25,7 +25,7 @@ public class DestruyePrefaps : MonoBehaviour
             }
         }
         
-        if (other.gameObject.CompareTag("Escudo"))
+       /* if (other.gameObject.CompareTag("Escudo"))
         {
             Destroy(other.gameObject);
 
@@ -33,7 +33,7 @@ public class DestruyePrefaps : MonoBehaviour
             {
                 Destroy(child.gameObject);
             }
-        }
+        }*/
         if (other.gameObject.CompareTag("Turbo"))
         {
             Destroy(other.gameObject);
