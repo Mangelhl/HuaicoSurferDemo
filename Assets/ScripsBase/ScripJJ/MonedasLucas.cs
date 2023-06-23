@@ -50,9 +50,7 @@ private void OnTriggerEnter(Collider collision)
     {
             PlayerPrefs.SetInt("Puntaje Maximo", PlayerPrefs.GetInt("Puntaje Maximo", 0) + 1);
             Destroy(collision.gameObject);
-            SM.text = (PlayerPrefs.GetInt("Puntaje Maximo", 0)).ToString();
-
-            
-        }
+            SM.text = (PlayerPrefs.GetInt("Puntaje Maximo", 0)).ToString(); 
+    }
 }
 }
