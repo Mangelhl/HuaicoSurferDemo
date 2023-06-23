@@ -7,12 +7,13 @@ public class GenerarInstancias : MonoBehaviour
     public GameObject[] prefabs;
     public int cantidadInstancias;
     DividirPlano plano;
-    public float Tiempo =2.5f;
+    public float Tiempo =1.5f;
     public int TiempoInicio;
     public bool paraObstaculos = true;
     public bool Aleatoriedad = false;
     public GameManager gm;
-    private float cambio = 99f;
+    private float cambioMenor = 33f;
+    private float cambioMayor = 99f;
     void Start()
     {
         gm = FindObjectOfType<GameManager>();
@@ -36,10 +37,15 @@ public class GenerarInstancias : MonoBehaviour
     private void Update()
     {
         gm.Tiempo = Tiempo;
-        if(gm.tiempoPasado > cambio)
+        if(gm.tiempoPasado > cambioMenor)
         {
-            cambio = cambio + 99f;
-            Tiempo = Tiempo - 0.4f;
+            cambioMenor = cambioMenor + 33f;
+            Tiempo = Tiempo - 2f;
+        }
+        if (gm.tiempoPasado > cambioMayor)
+        {
+            cambioMayor = cambioMayor + 33f;
+            Tiempo = Tiempo - 7f;
         }
     }
 

@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     private float ValorAnterior = 0;
     public float Tiempo = 2.5f;
     private Moverse move;
-   
+    private GenerarInstancias GI;
   
 
     // Start is called before the first frame update
@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         move = FindObjectOfType<Moverse>();
+        
         
     }
 
@@ -42,10 +43,10 @@ public class GameManager : MonoBehaviour
             if (tiempoPasado >= cambio)
             {
                 cambio = cambio + 33f;
-                VelocidadGeneral = VelocidadGeneral + 30;
-                move.VelocidadHorizontal = move.VelocidadHorizontal + 3;
-                move.velocidadOriniginal = move.velocidadOriniginal + 3;
-                Tiempo = Tiempo - 0.2f;
+                VelocidadGeneral = VelocidadGeneral + 25;
+                move.VelocidadHorizontal = move.VelocidadHorizontal + 2;
+                move.velocidadOriniginal = move.velocidadOriniginal + 2;
+                
             }
         
     }

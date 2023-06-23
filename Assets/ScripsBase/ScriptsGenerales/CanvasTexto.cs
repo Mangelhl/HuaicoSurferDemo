@@ -11,7 +11,10 @@ public class CanvasTexto : MonoBehaviour
     public TextMeshProUGUI Moneditas;
     public GameManager GM;
     public int PuntajeInGame;
-    public int monedas;
+    public int PuntajeMasAlto;
+    public int PuntajeAnterior;
+ 
+   
     // Start is called before the first frame update
     private void Awake()
     {
@@ -24,32 +27,50 @@ public class CanvasTexto : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        PuntajeMasAlto = PlayerPrefs.GetInt("PuntajeMasAlto", PuntajeAnterior);
+    }
+    private void Start()
+    {
+        PuntajeInGame = 0;
     }
 
     void Update()
     {
-        
-       GM = FindObjectOfType<GameManager>();
+      
+
+        GM = FindObjectOfType<GameManager>();
       
         EscenaGame = FindObjectOfType<TextMeshProUGUI>();
         EscenaMuerte = FindObjectOfType<TextMeshProUGUI>();
         GameObject objetoMonedas = GameObject.Find("Monedas");
-       /* if (objetoMonedas != null)
-        {
-            Moneditas = objetoMonedas.GetComponent<TextMeshProUGUI>();
-        }*/
+      
 
         Scene escenaActual = SceneManager.GetActiveScene();
+        if (escenaActual.buildIndex == 2)
+        {
+            PuntajeAnterior = PuntajeInGame;
+            if (PuntajeMasAlto < PuntajeAnterior)
+            {
+                PuntajeMasAlto = PuntajeAnterior;
+                PlayerPrefs.SetInt("PuntajeMasAlto", PuntajeMasAlto);
+                PlayerPrefs.Save();
+            }
+            else
+            {
+                PuntajeMasAlto = PuntajeMasAlto;
+            }
+        }
         if (escenaActual.buildIndex == 1)
         {
             PuntajeInGame = GM.Puntuacion;
             EscenaGame.text = PuntajeInGame.ToString();
         }
-        else if (escenaActual.buildIndex == 2)
+        else if (escenaActual.buildIndex == 2 )
         {
+           
             EscenaMuerte.text = PuntajeInGame.ToString();
         }
-
+        
         /*
         Moneditas.text = monedas.ToString();*/
     }

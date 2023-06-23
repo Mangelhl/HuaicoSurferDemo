@@ -22,17 +22,17 @@ public class Disparador : MonoBehaviour
     {
         while (Gm.tiempoPasado < 100)
         {
-            Tiempo = 85.0f / Gm.VelocidadGeneral;
+            Tiempo = 80.0f / Gm.VelocidadGeneral;
             Instantiate(objetoInstanciadoCerro, transform.position, transform.rotation);
             yield return new WaitForSeconds(Tiempo);
-            Tiempo = 85.0f / Gm.VelocidadGeneral;
+            Tiempo = 80.0f / Gm.VelocidadGeneral;
         }
         while (Gm.tiempoPasado > 100)
         {
-            Tiempo = 85.0f / Gm.VelocidadGeneral;
+            Tiempo = 80.0f / Gm.VelocidadGeneral;
             Instantiate(ObjetoInstanciadoPueblo, transform.position, transform.rotation);
             yield return new WaitForSeconds(Tiempo);
-            Tiempo = 85.0f / Gm.VelocidadGeneral;
+            Tiempo = 80.0f / Gm.VelocidadGeneral;
         }
      
     }
