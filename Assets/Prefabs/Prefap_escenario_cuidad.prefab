@@ -134,11 +134,16 @@ MonoBehaviour:
   prefabs:
   - {fileID: 1992725502337790902, guid: e7efe08315812e04f9e25486845b331e, type: 3}
   - {fileID: 5265206074437134444, guid: e111391edf11ec744a15051c180be956, type: 3}
+  - {fileID: 4172974803905935023, guid: 2957f4cc8dcf5f54e8b15de581e4c96d, type: 3}
+  - {fileID: 5184195113791138854, guid: dc4a9dec4383c1b48b3b2e5aa735a856, type: 3}
+  - {fileID: 7587391385203429147, guid: 42df8f101077faf4c9c4c434df3956fd, type: 3}
+  - {fileID: 5809297233505134400, guid: 7d01853396d2cf74cb98e0cdb1c1afae, type: 3}
   cantidadInstancias: 4
   Tiempo: 0
   TiempoInicio: 0
   paraObstaculos: 0
   Aleatoriedad: 1
+  gm: {fileID: 0}
 --- !u!1 &913156649672500389
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +283,7 @@ MonoBehaviour:
   TiempoInicio: 0
   paraObstaculos: 0
   Aleatoriedad: 1
+  gm: {fileID: 0}
 --- !u!1 &913156650835681850
 GameObject:
   m_ObjectHideFlags: 0
