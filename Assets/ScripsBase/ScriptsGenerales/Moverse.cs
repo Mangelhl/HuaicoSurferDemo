@@ -16,7 +16,18 @@ public class Moverse : MonoBehaviour
     public bool Turbo;
     public bool escudo;
     public bool invulnerable;
-   
+    public bool Rampa;
+    private float EstaEnSUelo = -0.74f;
+    private float MaximoEnAire = 18f;
+    private float tiempoSubida = 2f;
+    private float tiempoQuieto = 2f;
+    private float tiempoBajada = 2f;
+
+
+
+
+
+
 
     public GameObject Velocidad;
     public GameObject Escudo;
@@ -32,6 +43,7 @@ public class Moverse : MonoBehaviour
         Turbo = false;
         escudo = false;
         iman = false;
+        Rampa = false;
         Gm = FindObjectOfType<GameManager>();
         CT = FindObjectOfType<CanvasTexto>();
         rb = GetComponent<Rigidbody>();
@@ -40,6 +52,7 @@ public class Moverse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (ImanNumero == 1)
         {
             iman = false;
@@ -88,7 +101,9 @@ public class Moverse : MonoBehaviour
         {
             Iman.SetActive(false);
         }
+       
 
+       
 
     }
     private void OnTriggerEnter(Collider other)
@@ -101,10 +116,10 @@ public class Moverse : MonoBehaviour
         {
             StartCoroutine(EscuDo());
         }
-       /* if (other.gameObject.CompareTag("Escudo"))
+        if (other.gameObject.CompareTag("Escudo"))
         {
             escudo = true;
-        }*/
+        }
         if (other.gameObject.CompareTag("Turbo") && invulnerable == false)
         {
             StartCoroutine(turBo());
@@ -113,17 +128,21 @@ public class Moverse : MonoBehaviour
         {
             StartCoroutine(ImAn());
         }
-       /* if (other.gameObject.CompareTag("Persona"))
+        if (other.gameObject.CompareTag("Rampa"))
         {
-            CT.monedas = CT.monedas + 1;
-            Destroy(other.gameObject);
-
-            foreach (Transform child in other.transform)
-            {
-                Destroy(child.gameObject);
-            }
+            StartCoroutine(rampa());
         }
-       */
+        /* if (other.gameObject.CompareTag("Persona"))
+         {
+             CT.monedas = CT.monedas + 1;
+             Destroy(other.gameObject);
+
+             foreach (Transform child in other.transform)
+             {
+                 Destroy(child.gameObject);
+             }
+         }
+        */
 
 
     }
@@ -154,5 +173,32 @@ public class Moverse : MonoBehaviour
         yield return new WaitForSeconds(10f);
         ImanNumero = 1;
        
+    }
+    IEnumerator rampa()
+    {
+        
+        float tiempoPasado = 0f;
+        float inicioPosicionY = EstaEnSUelo;
+        float finalPosicionY = MaximoEnAire;
+
+        while (tiempoPasado < tiempoSubida)
+        {
+            tiempoPasado += Time.deltaTime;
+            float nuevaPosicionY = Mathf.Lerp(inicioPosicionY, finalPosicionY, tiempoPasado / tiempoSubida);
+            transform.position = new Vector3(transform.position.x, nuevaPosicionY, transform.position.z);
+            yield return null;
+        }
+        yield return new WaitForSeconds(tiempoQuieto);
+        tiempoPasado = 0f;
+        inicioPosicionY = MaximoEnAire;
+        finalPosicionY = EstaEnSUelo;
+        while (tiempoPasado < tiempoBajada)
+        {
+            tiempoPasado += Time.deltaTime;
+            float nuevaPosicionY = Mathf.Lerp(inicioPosicionY, finalPosicionY, tiempoPasado / tiempoBajada);
+            transform.position = new Vector3(transform.position.x, nuevaPosicionY, transform.position.z);
+            yield return null;
+        }
+        transform.position = new Vector3(transform.position.x, EstaEnSUelo, transform.position.z);
     }
 }

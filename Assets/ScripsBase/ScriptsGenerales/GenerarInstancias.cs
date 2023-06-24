@@ -11,11 +11,14 @@ public class GenerarInstancias : MonoBehaviour
     public int TiempoInicio;
     public bool paraObstaculos = true;
     public bool Aleatoriedad = false;
+    public bool CantidadDeObstaculosEnElTiempo;
+    private bool EnBosque;
     public GameManager gm;
     private float cambioMenor = 33f;
-    private float cambioMayor = 99f;
+    private float cambioMayor = 100f;
     void Start()
     {
+        EnBosque = true;
         gm = FindObjectOfType<GameManager>();
         plano = GetComponent<DividirPlano>();
         if (paraObstaculos)
@@ -36,16 +39,18 @@ public class GenerarInstancias : MonoBehaviour
     }
     private void Update()
     {
-        gm.Tiempo = Tiempo;
-        if(gm.tiempoPasado > cambioMenor)
+        if (CantidadDeObstaculosEnElTiempo && gm.tiempoPasado >= cambioMayor)
         {
-            cambioMenor = cambioMenor + 33f;
-            Tiempo = Tiempo - 2f;
+            EnBosque = false;
+            Tiempo = 0.000f;
+            cambioMayor = cambioMayor + 23f;
+            cantidadInstancias = cantidadInstancias + 1;
         }
-        if (gm.tiempoPasado > cambioMayor)
+        gm.Tiempo = Tiempo;
+        if (gm.tiempoPasado > cambioMenor && EnBosque == true)
         {
-            cambioMayor = cambioMayor + 33f;
-            Tiempo = Tiempo - 7f;
+            cambioMenor = cambioMenor + 35f;
+            Tiempo = Tiempo - 0.5f;
         }
     }
 
@@ -100,4 +105,5 @@ public class GenerarInstancias : MonoBehaviour
             list[n] = value;
         }
     }
+    
 }
