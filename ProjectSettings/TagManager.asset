@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Obstaculo
+  - Plano
+  - Lucas
+  - Turbo
+  - Iman
+  - Civil
+  - SliderPrev
+  - SliderAmbi
+  - SliderInfra
+  - Rampa
   layers:
   - Default
   - TransparentFX

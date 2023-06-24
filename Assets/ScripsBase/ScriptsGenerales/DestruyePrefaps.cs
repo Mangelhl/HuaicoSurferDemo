@@ -52,14 +52,23 @@ public class DestruyePrefaps : MonoBehaviour
                 Destroy(child.gameObject);
             }
         }
-       /* if (other.gameObject.CompareTag("Persona"))
-       {
+        /* if (other.gameObject.CompareTag("Persona"))
+        {
+             Destroy(other.gameObject);
+
+             foreach (Transform child in other.transform)
+             {
+                 Destroy(child.gameObject);
+             }
+         }*/
+        if (other.gameObject.CompareTag("Rampa"))
+        {
             Destroy(other.gameObject);
 
             foreach (Transform child in other.transform)
             {
                 Destroy(child.gameObject);
             }
-        }*/
+        }
     }
 }
