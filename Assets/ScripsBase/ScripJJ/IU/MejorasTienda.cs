@@ -4,6 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Networking.Types;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
+
 public class MejorasTienda : MonoBehaviour
 {
     MonedasLucas ML;
@@ -13,59 +15,17 @@ public class MejorasTienda : MonoBehaviour
 
     private void Awake()
     {
-        switch (PlayerPrefs.GetInt("Minfra", 0))
-        {
-            case 1:
-                Botones[0].SetActive(false);
-                break;
-            case 2:
-                Botones[0].SetActive(false);
-                Botones[1].SetActive(false);
-                break;
-            case 3:
-                Botones[0].SetActive(false);
-                Botones[1].SetActive(false);
-                Botones[2].SetActive(false);
-                break;
-        }
-        switch (PlayerPrefs.GetInt("Mambi", 0))
-        {
-            case 1:
-                Botones[6].SetActive(false);
-                break;
-            case 2:
-                Botones[6].SetActive(false);
-                Botones[7].SetActive(false);
-                break;
-            case 3:
-                Botones[6].SetActive(false);
-                Botones[7].SetActive(false);
-                Botones[8].SetActive(false);
-                break;
-        }
-        switch (PlayerPrefs.GetInt("Mprev", 0))
-        {
-            case 1:
-                Botones[3].SetActive(false);
-                break;
-            case 2:
-                Botones[3].SetActive(false);
-                Botones[4].SetActive(false);
-                break;
-            case 3:
-                Botones[3].SetActive(false);
-                Botones[4].SetActive(false);
-                Botones[5].SetActive(false);
-                break;
-        }
-
+        MBotonInfra();
+        MBotonAmbi();
+        MbotonPrev();
     }
+
     public Slider sliderInfra, sliderAmbi, sliderPrev;
     private void Start()
     {
         //mejorar el rendimiento del juego
         QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = -1;
+        UnityEngine.Application.targetFrameRate = -1;
 
         //testeo
         IniciarSlider();
@@ -76,12 +36,16 @@ public class MejorasTienda : MonoBehaviour
     {
         if (sliderInfra.value == 0)
         {
-
         }
         Debug.Log("INFRA " + PlayerPrefs.GetInt("Minfra", 0));
         Debug.Log("Ambi" + PlayerPrefs.GetInt("Mambi", 0));
         Debug.Log("Preve" + PlayerPrefs.GetInt("Mprev", 0));
     }
+    //actualizar dinero
+    public void BotonActualizar()
+    {  ML.SM.text=  (PlayerPrefs.GetInt("Puntaje Maximo", 0)).ToString(); }
+
+    //mejoras InfraEstructura
     public void Infraestructura1()
     {
         if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo1 && PlayerPrefs.GetInt("Minfra", 0) == 0)
@@ -107,6 +71,7 @@ public class MejorasTienda : MonoBehaviour
             Botones[2].SetActive(false);
         }
      }
+    //MejorasAmbientación
 
     public void Ambientación1()
     {
@@ -131,6 +96,7 @@ public class MejorasTienda : MonoBehaviour
             Botones[8].SetActive(false);
         }
     }
+    //mejoras prevención
     public void Prevención1()
     {
         if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo1 && PlayerPrefs.GetInt("Mprev", 0) == 0)
@@ -158,6 +124,66 @@ public class MejorasTienda : MonoBehaviour
             Botones[5].SetActive(false);
         }
     }
+    //quitar Botones por mejoras 
+    private void MBotonInfra()
+    {
+        switch (PlayerPrefs.GetInt("Minfra", 0))
+        {
+            case 1:
+                Botones[0].SetActive(false);
+                break;
+            case 2:
+                Botones[0].SetActive(false);
+                Botones[1].SetActive(false);
+                break;
+            case 3:
+                Botones[0].SetActive(false);
+                Botones[1].SetActive(false);
+                Botones[2].SetActive(false);
+                break;
+        }
+    }
+
+    private void MbotonPrev()
+    {
+        switch (PlayerPrefs.GetInt("Mprev", 0))
+        {
+            case 1:
+                Botones[3].SetActive(false);
+                break;
+            case 2:
+                Botones[3].SetActive(false);
+                Botones[4].SetActive(false);
+                break;
+            case 3:
+                Botones[3].SetActive(false);
+                Botones[4].SetActive(false);
+                Botones[5].SetActive(false);
+                break;
+        }
+    }
+
+    private void MBotonAmbi()
+    {
+        switch (PlayerPrefs.GetInt("Mambi", 0))
+        {
+            case 1:
+                Botones[6].SetActive(false);
+                break;
+            case 2:
+                Botones[6].SetActive(false);
+                Botones[7].SetActive(false);
+                break;
+            case 3:
+                Botones[6].SetActive(false);
+                Botones[7].SetActive(false);
+                Botones[8].SetActive(false);
+                break;
+        }
+    }
+
+
+    //testeo
     private void IniciarSlider()
     {
      /*   sliderInfra = GameObject.FindGameObjectWithTag("SliderInfra").GetComponent<Slider>();

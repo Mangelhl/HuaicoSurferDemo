@@ -53,9 +53,9 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42497050799150916}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -132,17 +132,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 1992725502337790902, guid: e7efe08315812e04f9e25486845b331e, type: 3}
   - {fileID: 5265206074437134444, guid: e111391edf11ec744a15051c180be956, type: 3}
   - {fileID: 4172974803905935023, guid: 2957f4cc8dcf5f54e8b15de581e4c96d, type: 3}
+  - {fileID: 7178742136175430451, guid: b08796b41b3b8a94eb869741769336bf, type: 3}
+  - {fileID: 1992725502337790902, guid: e7efe08315812e04f9e25486845b331e, type: 3}
+  - {fileID: 5733390035495930952, guid: 00eb531470be02c4c82e9dc34536f496, type: 3}
   - {fileID: 5184195113791138854, guid: dc4a9dec4383c1b48b3b2e5aa735a856, type: 3}
   - {fileID: 7587391385203429147, guid: 42df8f101077faf4c9c4c434df3956fd, type: 3}
-  - {fileID: 5809297233505134400, guid: 7d01853396d2cf74cb98e0cdb1c1afae, type: 3}
   cantidadInstancias: 4
   Tiempo: 0
   TiempoInicio: 0
   paraObstaculos: 0
   Aleatoriedad: 1
+  CantidadDeObstaculosEnElTiempo: 0
   gm: {fileID: 0}
 --- !u!1 &913156649672500389
 GameObject:
@@ -197,9 +199,9 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913156649672500389}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -277,17 +279,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 1992725502337790902, guid: 00c234f8eedef0843a2160141b84bf33, type: 3}
-  - {fileID: 4832059574692319413, guid: a08c97a68f564b94f9b745399d38ec8c, type: 3}
-  - {fileID: 8578168647236590767, guid: eda9b5aaa76a8d74e8b6393dbd31c28e, type: 3}
-  - {fileID: 2540359299916056355, guid: ef4479c8a3efb534faf14f0b7d7cf406, type: 3}
-  - {fileID: 4729810923348973232, guid: 3247c016dda271c43a5a5894a10c5800, type: 3}
-  - {fileID: 4706931057771261611, guid: 1296d719d4d17204e97434ba436e1a8f, type: 3}
-  - {fileID: 7961929187516115116, guid: b724c2f5139eace49b8312e0f1dfaabb, type: 3}
+  - {fileID: 5265206074437134444, guid: 9c1c196c40cb53d45b4ae5f1d23c6b79, type: 3}
   cantidadInstancias: 4
   Tiempo: 0
   TiempoInicio: 0
   paraObstaculos: 0
   Aleatoriedad: 1
+  CantidadDeObstaculosEnElTiempo: 0
   gm: {fileID: 0}
 --- !u!1 &913156650835681850
 GameObject:
@@ -482,9 +480,9 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913156651816400160}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -568,7 +566,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1

@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 849950781423069688}
   - component: {fileID: 9050093571136330518}
   m_Layer: 0
-  m_Name: Casa2Izquierda
+  m_Name: Casa2IzquierdaT1-0
   m_TagString: Plano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
