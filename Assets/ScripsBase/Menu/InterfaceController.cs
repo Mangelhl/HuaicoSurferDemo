@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InterfaceController : MonoBehaviour
 {
     [SerializeField] private GameObject Buttons;
-    [SerializeField] private RawImage rimage1;
-    [SerializeField] private RawImage rimage2;
     [SerializeField] private GameObject Text;
-
-    public float idleTime = 5f;       
+    [SerializeField] private GameObject Tienda;
+    [SerializeField] private GameObject MejoraT;
+    [SerializeField] private GameObject MejorbT;
+    public float idleTime = 8f;       
     private float timeSinceLastInput = 0f;           
 
     private void Start()
     {
-        
+        MejoraT.SetActive(false);
     }
 
     private void Update()
@@ -27,7 +28,7 @@ public class InterfaceController : MonoBehaviour
         }
         else
         {
-            
+          
             timeSinceLastInput += Time.deltaTime;
 
             if (timeSinceLastInput >= idleTime)
@@ -38,19 +39,34 @@ public class InterfaceController : MonoBehaviour
     }
 
     private void ShowInterface()
-    {        
-        Buttons.SetActive(true);
-        rimage1.enabled = true;
-        rimage2.enabled = true;
-        Text.SetActive(false);
+    {
+        if (MejoraT.activeInHierarchy==false)
+        {
+            Buttons.SetActive(true);
+            Tienda.SetActive(true);
+            Text.SetActive(false);
+        }
+        if (MejoraT.activeInHierarchy == true)
+        {
+            Text.SetActive(false);
+            MejorbT.SetActive(true);
+        }
     }
 
     private void HideInterface()
-    {       
-        Buttons.SetActive(false);
-        rimage1.enabled = false;
-        rimage2.enabled = false;
-        Text.SetActive(true);
+    {
+        if (MejoraT.activeInHierarchy == false)
+        {
+            Tienda.SetActive(false);
+            Buttons.SetActive(false);
+            Text.SetActive(true);
+            
+        }
+        if (MejoraT.activeInHierarchy == true)
+        {
+            Text.SetActive(true);
+            MejorbT.SetActive(false);
+        }
     }
 }
 
