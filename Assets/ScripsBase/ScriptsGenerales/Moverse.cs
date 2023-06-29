@@ -10,7 +10,9 @@ public class Moverse : MonoBehaviour
 
     public int VelocidadHorizontal = 80;
     public int velocidadOriniginal = 80;
-   
+    public int VelocidadDeSubida;
+
+
     Rigidbody rb;
     public bool iman;
     public bool Turbo;
@@ -132,9 +134,8 @@ public class Moverse : MonoBehaviour
         {
             StartCoroutine(rampa());
         }
-        /* if (other.gameObject.CompareTag("Persona"))
+         if (other.gameObject.CompareTag("Civil"))
          {
-             CT.monedas = CT.monedas + 1;
              Destroy(other.gameObject);
 
              foreach (Transform child in other.transform)
@@ -142,7 +143,7 @@ public class Moverse : MonoBehaviour
                  Destroy(child.gameObject);
              }
          }
-        */
+        
 
 
     }
@@ -183,7 +184,7 @@ public class Moverse : MonoBehaviour
 
         while (tiempoPasado < tiempoSubida)
         {
-            tiempoPasado += Time.deltaTime;
+            tiempoPasado += Time.deltaTime * VelocidadDeSubida;
             float nuevaPosicionY = Mathf.Lerp(inicioPosicionY, finalPosicionY, tiempoPasado / tiempoSubida);
             transform.position = new Vector3(transform.position.x, nuevaPosicionY, transform.position.z);
             yield return null;
