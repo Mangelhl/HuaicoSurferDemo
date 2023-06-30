@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 1306655272862667195}
   - component: {fileID: 4320722693247662858}
   - component: {fileID: 3764978184138571648}
-  - component: {fileID: 5060203828224225891}
-  - component: {fileID: 8012327723219531642}
+  - component: {fileID: 9043340280293942275}
+  - component: {fileID: 8507170234645248959}
   m_Layer: 0
-  m_Name: Suelo1
+  m_Name: 'Suelo '
   m_TagString: Plano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5060203828224225891
+--- !u!114 &9043340280293942275
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,12 +114,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cantidadX: 1
-  cantidadZ: 4
+  cantidadZ: 3
   espacioX: 2
   espacioZ: 2
   origen: {x: 0, y: 0, z: 0}
   puntoInicioArrays: {fileID: 1801494423134799997}
---- !u!114 &8012327723219531642
+--- !u!114 &8507170234645248959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,22 +132,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 8752066964079585624, guid: 2578f4a30e70cd047bcdde00900d7072, type: 3}
-  - {fileID: 2540359299916056355, guid: ef4479c8a3efb534faf14f0b7d7cf406, type: 3}
-  - {fileID: 7105150317500984901, guid: a9cab44c5b5909541b9fd4498d26521d, type: 3}
-  - {fileID: 4832059574692319413, guid: a08c97a68f564b94f9b745399d38ec8c, type: 3}
-  - {fileID: 4337509186469071803, guid: 7cf0f05499ce3614c9bfdff7eb9d642c, type: 3}
-  - {fileID: 4337509186469071803, guid: 7cf0f05499ce3614c9bfdff7eb9d642c, type: 3}
-  cantidadInstancias: 4
-  Tiempo: 1.5
+  - {fileID: 5265206074437134444, guid: e111391edf11ec744a15051c180be956, type: 3}
+  - {fileID: 4172974803905935023, guid: 2957f4cc8dcf5f54e8b15de581e4c96d, type: 3}
+  - {fileID: 6617573755157450936, guid: 4f80917e6a7d0014d9216f2a269cee62, type: 3}
+  - {fileID: 1992725502337790902, guid: e7efe08315812e04f9e25486845b331e, type: 3}
+  - {fileID: 5733390035495930952, guid: 00eb531470be02c4c82e9dc34536f496, type: 3}
+  - {fileID: 5184195113791138854, guid: dc4a9dec4383c1b48b3b2e5aa735a856, type: 3}
+  cantidadInstancias: 3
+  Tiempo: 0
   TiempoInicio: 0
   paraObstaculos: 0
   Aleatoriedad: 1
-<<<<<<< Updated upstream
-  CantidadDeObstaculosEnElTiempo: 0
-=======
   CantidadDeObstaculosEnElTiempo: 1
->>>>>>> Stashed changes
   gm: {fileID: 0}
 --- !u!1 &913156649672500389
 GameObject:
@@ -161,8 +157,8 @@ GameObject:
   - component: {fileID: 913156649672501086}
   - component: {fileID: 913156649672501087}
   - component: {fileID: 913156649672500384}
-  - component: {fileID: 1018563236132901083}
-  - component: {fileID: 483144996467171759}
+  - component: {fileID: 913156649672500385}
+  - component: {fileID: 913156649672500386}
   m_Layer: 0
   m_Name: Suelo
   m_TagString: Plano
@@ -250,7 +246,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1018563236132901083
+--- !u!114 &913156649672500385
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -263,12 +259,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cantidadX: 1
-  cantidadZ: 4
+  cantidadZ: 3
   espacioX: 2
   espacioZ: 2
   origen: {x: 0, y: 0, z: 0}
   puntoInicioArrays: {fileID: 913156651098912634}
---- !u!114 &483144996467171759
+--- !u!114 &913156649672500386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -281,22 +277,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 5184195113791138854, guid: dc4a9dec4383c1b48b3b2e5aa735a856, type: 3}
-  - {fileID: 5733390035495930952, guid: 00eb531470be02c4c82e9dc34536f496, type: 3}
-  - {fileID: 1992725502337790902, guid: e7efe08315812e04f9e25486845b331e, type: 3}
-  - {fileID: 5265206074437134444, guid: e111391edf11ec744a15051c180be956, type: 3}
-  - {fileID: 4172974803905935023, guid: 2957f4cc8dcf5f54e8b15de581e4c96d, type: 3}
-  - {fileID: 7178742136175430451, guid: b08796b41b3b8a94eb869741769336bf, type: 3}
-  cantidadInstancias: 4
-  Tiempo: 1.5
+  - {fileID: 7105150317500984901, guid: a9cab44c5b5909541b9fd4498d26521d, type: 3}
+  - {fileID: 4832059574692319413, guid: a08c97a68f564b94f9b745399d38ec8c, type: 3}
+  - {fileID: 4337509186469071803, guid: 7cf0f05499ce3614c9bfdff7eb9d642c, type: 3}
+  - {fileID: 2540359299916056355, guid: ef4479c8a3efb534faf14f0b7d7cf406, type: 3}
+  - {fileID: 8752066964079585624, guid: 2578f4a30e70cd047bcdde00900d7072, type: 3}
+  - {fileID: 8578168647236590767, guid: eda9b5aaa76a8d74e8b6393dbd31c28e, type: 3}
+  cantidadInstancias: 3
+  Tiempo: 0
   TiempoInicio: 0
   paraObstaculos: 0
   Aleatoriedad: 1
-<<<<<<< Updated upstream
-  CantidadDeObstaculosEnElTiempo: 0
-=======
   CantidadDeObstaculosEnElTiempo: 1
->>>>>>> Stashed changes
   gm: {fileID: 0}
 --- !u!1 &913156650835681850
 GameObject:
@@ -354,7 +346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913156651098912634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0799998, y: 21.71, z: -3.7166667}
+  m_LocalPosition: {x: -1.0799998, y: 21.71, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -646,7 +638,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801494423134799997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7158933, y: 21.509998, z: -3.7166667}
+  m_LocalPosition: {x: 0.7158933, y: 21.509998, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
