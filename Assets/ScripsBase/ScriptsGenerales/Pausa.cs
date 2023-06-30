@@ -5,8 +5,8 @@ using UnityEngine;
 public class Pausa : MonoBehaviour
 {
     private bool espausa;
-    private AudioSource AudioManager;
-
+    [SerializeField] private AudioSource AudioManager;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,24 +20,24 @@ public class Pausa : MonoBehaviour
         {
             granpausa();
             detenermusica();
-           
+            Debug.Log ("hola");
         }
     }
     private void granpausa()
     {
         espausa = !espausa;
-        if (espausa)
+        /*if (espausa)
         {
             Time.timeScale = 0f;
         }
         else
         {
             Time.timeScale = 1f;
-        }
+        }*/
     }
     private void detenermusica()
     {
-        espausa = !espausa;
+        
         if (espausa)
         {
             AudioManager.Pause();

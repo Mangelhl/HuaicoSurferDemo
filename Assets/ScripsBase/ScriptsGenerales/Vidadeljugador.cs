@@ -24,25 +24,25 @@ public class Vidadeljugador : MonoBehaviour
 
     public void ChangeLife(int value)
     {
-        life += value;
+        vida += value;
 
-        if (life <= 0)
+        if (vida <= 0)
         {
-            clip.Play();
+            //clip.Play(); 
             Destroy(GetComponent<SpriteRenderer>());
             Destroy(GetComponent<Collider2D>());
-            defeat.SetActive(true);
+            //defeat.SetActive(true);
             Destroy(gameObject, 1f);
             life1.SetActive(false);
             Time.timeScale = 0f;
         }
 
-        else if (life <= 1)
+        else if (vida <= 1)
         {
             life2.SetActive(false);
         }
 
-        else if (life <= 2)
+        else if (vida <= 2)
         {
             life3.SetActive(false);
         }
@@ -69,19 +69,19 @@ public class Vidadeljugador : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstaculo") && invencible == false)
         {
-            Vida -= 1;
+            vida -= 1;
 
         }
         if (other.gameObject.CompareTag("Civil") && invencible == false)
         {
-            Vida += 1;
+            vida += 1;
             ChangeLife(+1);
 
-            if (life == 2)
+            if (vida == 2)
             {
                 life2.SetActive(true);
             }
-            else if (life == 3)
+            else if (vida == 3)
             {
                 life3.SetActive(true);
             }
