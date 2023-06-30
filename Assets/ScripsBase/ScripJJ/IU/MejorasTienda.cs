@@ -1,196 +1,116 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Networking.Types;
 using UnityEngine.UI;
-using static System.Net.Mime.MediaTypeNames;
-
 public class MejorasTienda : MonoBehaviour
 {
     MonedasLucas ML;
+    static int Infra, Ambi, Prev;
     [SerializeField, Tooltip("Cuanto costara la mejora")] int Costo1, Costo2, Costo3;
    [SerializeField] GameObject[] Botones;
     [SerializeField] float MaximoV = 3;
-
-    private void Awake()
-    {
-        MBotonInfra();
-        MBotonAmbi();
-        MbotonPrev();
-    }
-
     public Slider sliderInfra, sliderAmbi, sliderPrev;
     private void Start()
     {
-        //mejorar el rendimiento del juego
-        QualitySettings.vSyncCount = 0;
-        UnityEngine.Application.targetFrameRate = -1;
-
-        //testeo
         IniciarSlider();
-        //buscarlucas
         ML=FindObjectOfType<MonedasLucas>();
     }
     void Update()
     {
         if (sliderInfra.value == 0)
         {
-        }
-        Debug.Log("INFRA " + PlayerPrefs.GetInt("Minfra", 0));
-        Debug.Log("Ambi" + PlayerPrefs.GetInt("Mambi", 0));
-        Debug.Log("Preve" + PlayerPrefs.GetInt("Mprev", 0));
-    }
-    //actualizar dinero
-    public void BotonActualizar()
-    {  ML.SM.text=  (PlayerPrefs.GetInt("Puntaje Maximo", 0)).ToString(); }
 
-    //mejoras InfraEstructura
+        }
+        Debug.Log("INFRA"+Infra);
+        Debug.Log("Ambi" + Ambi);
+        Debug.Log("Preve" + Prev);
+    }
     public void Infraestructura1()
     {
-        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo1 && PlayerPrefs.GetInt("Minfra", 0) == 0)
+        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo1 && Infra == 0)
         {
             ML.RestarLucas(Costo1);
-            PlayerPrefs.SetInt("Minfra", 1);
+            Infra += 1;
             Botones[0].SetActive(false);
         }
     }
     public void Infraestructura2()
-    { if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo2 && PlayerPrefs.GetInt("Minfra", 0) == 1)
+    { if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo2 && Infra == 1)
         {
-            ML.RestarLucas(Costo2); 
-            PlayerPrefs.SetInt("Minfra", 2);
+            ML.RestarLucas(Costo2);
+            Infra += 1;
             Botones[1].SetActive(false);
         } }
     public void Infraestructura3() 
     { 
-        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo3 && PlayerPrefs.GetInt("Minfra", 0) == 2)
+        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo3 && Infra == 2)
         {
             ML.RestarLucas(Costo3);
-            PlayerPrefs.SetInt("Minfra", 3);
+            Infra += 1;
             Botones[2].SetActive(false);
         }
      }
-    //MejorasAmbientación
 
     public void Ambientación1()
     {
-        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo1 && PlayerPrefs.GetInt("Mambi", 0) == 0)
+        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo1 && Ambi == 0)
         {
             ML.RestarLucas(Costo1);
-            PlayerPrefs.SetInt("Mambi", 1);
+            Ambi += 1;
             Botones[6].SetActive(false);
         } }
     public void Ambientación2() {
-        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo2 && PlayerPrefs.GetInt("Mambi", 0) == 1)
+        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo2 && Ambi == 1)
         {
             ML.RestarLucas(Costo2);
-            PlayerPrefs.SetInt("Mambi", 2);
+            Ambi += 1;
             Botones[7].SetActive(false);
         } }
     public void Ambientación3() { 
-        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo3 && PlayerPrefs.GetInt("Mambi", 0) == 2)
+        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo3 && Ambi == 2)
         {
             ML.RestarLucas(Costo3);
-            PlayerPrefs.SetInt("Mambi", 3);
+            Ambi += 1;
             Botones[8].SetActive(false);
         }
     }
-    //mejoras prevención
     public void Prevención1()
     {
-        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo1 && PlayerPrefs.GetInt("Mprev", 0) == 0)
+        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo1 && Prev == 0)
         {
             ML.RestarLucas(Costo1);
-            PlayerPrefs.SetInt("Mprev", 1);
+            Prev += 1;
             Botones[3].SetActive(false);
 
         } }
     public void Prevención2()
     {
-        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo2 && PlayerPrefs.GetInt("Mprev", 0) == 1)
+        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo2 && Prev == 1)
         {
             ML.RestarLucas(Costo2);
-            PlayerPrefs.SetInt("Mprev", 2);
+            Prev += 1;
             Botones[4].SetActive(false);
         }
     }
     public void Prevención3() {
             
-        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo3 && PlayerPrefs.GetInt("Mprev", 0) == 2)
+        if (PlayerPrefs.GetInt("Puntaje Maximo", 0) > Costo3 && Prev == 2)
         {
             ML.RestarLucas(Costo3);
-            PlayerPrefs.SetInt("Mprev", 3);
+            Prev += 1;
             Botones[5].SetActive(false);
         }
     }
-    //quitar Botones por mejoras 
-    private void MBotonInfra()
-    {
-        switch (PlayerPrefs.GetInt("Minfra", 0))
-        {
-            case 1:
-                Botones[0].SetActive(false);
-                break;
-            case 2:
-                Botones[0].SetActive(false);
-                Botones[1].SetActive(false);
-                break;
-            case 3:
-                Botones[0].SetActive(false);
-                Botones[1].SetActive(false);
-                Botones[2].SetActive(false);
-                break;
-        }
-    }
-
-    private void MbotonPrev()
-    {
-        switch (PlayerPrefs.GetInt("Mprev", 0))
-        {
-            case 1:
-                Botones[3].SetActive(false);
-                break;
-            case 2:
-                Botones[3].SetActive(false);
-                Botones[4].SetActive(false);
-                break;
-            case 3:
-                Botones[3].SetActive(false);
-                Botones[4].SetActive(false);
-                Botones[5].SetActive(false);
-                break;
-        }
-    }
-
-    private void MBotonAmbi()
-    {
-        switch (PlayerPrefs.GetInt("Mambi", 0))
-        {
-            case 1:
-                Botones[6].SetActive(false);
-                break;
-            case 2:
-                Botones[6].SetActive(false);
-                Botones[7].SetActive(false);
-                break;
-            case 3:
-                Botones[6].SetActive(false);
-                Botones[7].SetActive(false);
-                Botones[8].SetActive(false);
-                break;
-        }
-    }
-
-
-    //testeo
     private void IniciarSlider()
     {
      /*   sliderInfra = GameObject.FindGameObjectWithTag("SliderInfra").GetComponent<Slider>();
         sliderPrev = GameObject.FindGameObjectWithTag("SliderAmbi").GetComponent<Slider>();
         sliderAmbi = GameObject.FindGameObjectWithTag("SliderPrev").GetComponent<Slider>();*/
         sliderInfra.maxValue = MaximoV;
+        sliderInfra.value = Infra;
         sliderAmbi.maxValue = MaximoV;
+        sliderAmbi.value = Ambi;
         sliderPrev.maxValue = MaximoV;
+        sliderPrev.value = Prev;
     }
 }

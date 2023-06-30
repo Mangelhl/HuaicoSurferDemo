@@ -25,14 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572883221145003177}
-  m_LocalRotation: {x: 0.4738816, y: 0.5660515, z: 0.43300855, w: 0.5172287}
+  m_LocalRotation: {x: 0.55348325, y: 0.48850214, z: 0.50574446, w: 0.44636813}
   m_LocalPosition: {x: -0.03497021, y: 0.19143522, z: -0.0001125255}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4172299118171129127}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 95.161, z: 79.87}
+  m_LocalEulerAnglesHint: {x: 0, y: 95.161, z: 97.137}
 --- !u!33 &7902224954729862858
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -49,9 +49,9 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572883221145003177}
   m_Enabled: 1
-  m_CastShadows: 2
+  m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 0
+  m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -132,7 +132,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3784198200174452510}
   m_Enabled: 1
-  m_CastShadows: 2
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -192,7 +192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5809297233505134400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -47.60971, y: 0, z: -45.968452}
+  m_LocalPosition: {x: -38.345264, y: 14.607971, z: -125}
   m_LocalScale: {x: 74.107, y: 74.107, z: 74.107}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -252,9 +252,9 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6852822493116203088}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 0
+  m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -335,7 +335,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7596577794517122033}
   m_Enabled: 1
-  m_CastShadows: 2
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
