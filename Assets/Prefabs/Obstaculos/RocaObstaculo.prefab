@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 130834553545765052}
   - component: {fileID: 3087635608171846433}
   - component: {fileID: 5229365450261235709}
-  - component: {fileID: -3248246828694579878}
+  - component: {fileID: -8576766376056143955}
   m_Layer: 0
   m_Name: RocaObstaculo
   m_TagString: Obstaculo
@@ -64,7 +64,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.3560514
   m_Center: {x: 0.10000007, y: -0.13000011, z: 0.38081235}
---- !u!114 &-3248246828694579878
+--- !u!114 &-8576766376056143955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,9 +73,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 764206734129588742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88fc86e633fb705409737fbff0e7f994, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fc9034ce68e687498299d28ca32f822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VelocidadEscenario: 0
 --- !u!1 &5191950902919594293
 GameObject:
   m_ObjectHideFlags: 0

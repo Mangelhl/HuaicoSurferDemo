@@ -22,23 +22,23 @@ public class Disparador : MonoBehaviour
     {
         while (Gm.tiempoPasado < 100)
         {
-            Tiempo = 80.0f / Gm.VelocidadGeneral;
+            Tiempo = 95.0f / Gm.VelocidadGeneral;
             Instantiate(objetoInstanciadoCerro, transform.position, transform.rotation);
             yield return new WaitForSeconds(Tiempo);
-            Tiempo = 80.0f / Gm.VelocidadGeneral;
+            Tiempo = 95.0f / Gm.VelocidadGeneral;
         }
         while (Gm.tiempoPasado > 100)
         {
-            Tiempo = 80.0f / Gm.VelocidadGeneral;
+            Tiempo = 110.0f / Gm.VelocidadGeneral;
             Instantiate(ObjetoInstanciadoPueblo, transform.position, transform.rotation);
             yield return new WaitForSeconds(Tiempo);
-            Tiempo = 80.0f / Gm.VelocidadGeneral;
+            Tiempo = 110.0f / Gm.VelocidadGeneral;
         }
      
     }
     void Update()
     {
-        Tiempo = 85.0f / Gm.VelocidadGeneral;
+        Tiempo = 95.0f / Gm.VelocidadGeneral;
     }
 
     // Update is called once per frame

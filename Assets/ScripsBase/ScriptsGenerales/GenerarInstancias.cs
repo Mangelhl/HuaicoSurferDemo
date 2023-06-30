@@ -49,8 +49,8 @@ public class GenerarInstancias : MonoBehaviour
         gm.Tiempo = Tiempo;
         if (gm.tiempoPasado > cambioMenor && EnBosque == true)
         {
-            cambioMenor = cambioMenor + 35f;
-            Tiempo = Tiempo - 0.5f;
+            cambioMenor = cambioMenor + 10f;
+            Tiempo = Tiempo - 0.2f;
         }
     }
 
