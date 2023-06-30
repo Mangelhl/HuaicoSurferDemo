@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2410556390595117489
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4764724629175075342, guid: 90f1c2e025290e0498f32a9e2f127f0e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764724629175075342, guid: 90f1c2e025290e0498f32a9e2f127f0e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 92.06067
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764724629175075342, guid: 90f1c2e025290e0498f32a9e2f127f0e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764724629175075342, guid: 90f1c2e025290e0498f32a9e2f127f0e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -133.27242
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764724629175075342, guid: 90f1c2e025290e0498f32a9e2f127f0e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764724629175075342, guid: 90f1c2e025290e0498f32a9e2f127f0e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764724629175075342, guid: 90f1c2e025290e0498f32a9e2f127f0e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764724629175075342, guid: 90f1c2e025290e0498f32a9e2f127f0e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764724629175075342, guid: 90f1c2e025290e0498f32a9e2f127f0e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764724629175075342, guid: 90f1c2e025290e0498f32a9e2f127f0e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764724629175075342, guid: 90f1c2e025290e0498f32a9e2f127f0e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202524355003048225, guid: 90f1c2e025290e0498f32a9e2f127f0e,
+        type: 3}
+      propertyPath: m_Name
+      value: "CasaPeque\xF1aT1-1D"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 90f1c2e025290e0498f32a9e2f127f0e, type: 3}

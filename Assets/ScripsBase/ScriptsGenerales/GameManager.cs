@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
             if (tiempoPasado >= cambio)
             {
                 cambio = cambio + 33f;
-                VelocidadGeneral = VelocidadGeneral + 25;
+                VelocidadGeneral = VelocidadGeneral + 15;
                 move.VelocidadHorizontal = move.VelocidadHorizontal + 2;
                 move.velocidadOriniginal = move.velocidadOriniginal + 2;
             }

@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 849950781423069688}
   - component: {fileID: 9050093571136330518}
   m_Layer: 0
-  m_Name: Casa2Izquierda
+  m_Name: Casa2IzquierdaT1-0
   m_TagString: Plano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,7 +236,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &9050093571136330518
 BoxCollider:
@@ -363,7 +363,7 @@ Transform:
   m_PrefabInstance: {fileID: 2523435185721862378}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7287038536392972464}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -373,7 +373,7 @@ Transform:
   - {fileID: 6662307878202596385}
   m_Father: {fileID: 4851724772592980545}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &2523435185721862378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ PrefabInstance:
     - target: {fileID: 6984491167205090160, guid: 0c913cf63530b864585e920c5dddee18,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6984491167205090160, guid: 0c913cf63530b864585e920c5dddee18,
         type: 3}
@@ -434,7 +434,7 @@ PrefabInstance:
     - target: {fileID: 6984491167205090160, guid: 0c913cf63530b864585e920c5dddee18,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 6984491167205090160, guid: 0c913cf63530b864585e920c5dddee18,
         type: 3}

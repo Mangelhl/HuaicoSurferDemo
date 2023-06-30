@@ -13,7 +13,11 @@ public class Cambio : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(E);
     }
-
+    public void RegresarMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag=="Player")
