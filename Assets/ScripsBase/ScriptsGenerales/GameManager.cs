@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public float Tiempo = 2.5f;
     private Moverse move;
     private GenerarInstancias GI;
+    public MonedasLucas ML; 
   
 
     // Start is called before the first frame update
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        ML = FindObjectOfType<MonedasLucas>();
         move = FindObjectOfType<Moverse>();
     }
 
@@ -33,7 +35,14 @@ public class GameManager : MonoBehaviour
     {
             tiempoPasado += Time.deltaTime;
 
+            if (tiempoPasado > ValorAnterior && ML.NPS == true)
+            {
+            Puntuacion = Puntuacion + 2;
+            ValorAnterior = ValorAnterior + 2;
+            }
+
             if (tiempoPasado > ValorAnterior)
+
             {
                 Puntuacion = Puntuacion + 1;
                 ValorAnterior = ValorAnterior + 1;

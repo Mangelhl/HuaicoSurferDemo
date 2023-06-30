@@ -13,7 +13,7 @@ public class CanvasTexto : MonoBehaviour
     public int PuntajeInGame;
     public int PuntajeMasAlto;
     public int PuntajeAnterior;
- 
+    
    
     // Start is called before the first frame update
     private void Awake()
@@ -31,6 +31,7 @@ public class CanvasTexto : MonoBehaviour
     }
     private void Start()
     {
+        
         PuntajeInGame = 0;
     }
 
