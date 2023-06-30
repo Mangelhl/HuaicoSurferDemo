@@ -4,13 +4,30 @@ using UnityEngine;
 
 public class Disparador : MonoBehaviour
 {
-    public GameObject objetoInstanciadoCerro;
+    public GameObject []objetoCerro;
     public GameObject ObjetoInstanciadoPueblo;
     GameManager Gm;
     public float Tiempo;
-        
+        private  int N;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        switch (PlayerPrefs.GetInt("Ambi", 0))
+        {
+                case 1:
+                N = 0;
+                break;
+
+                case 2:
+                N = 1;
+                break;
+
+                case 3:  
+                N = 2;
+                break;
+        }
+    }
     void Start()
     {
         Debug.Log(Tiempo);
@@ -23,7 +40,7 @@ public class Disparador : MonoBehaviour
         while (Gm.tiempoPasado < 100)
         {
             Tiempo = 95.0f / Gm.VelocidadGeneral;
-            Instantiate(objetoInstanciadoCerro, transform.position, transform.rotation);
+            Instantiate(objetoCerro[N], transform.position, transform.rotation);
             yield return new WaitForSeconds(Tiempo);
             Tiempo = 95.0f / Gm.VelocidadGeneral;
         }

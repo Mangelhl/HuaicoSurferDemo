@@ -8,108 +8,14 @@ public class MejorasTienda : MonoBehaviour
     [SerializeField, Tooltip("Cuanto costara la mejora")] int Costo1, Costo2, Costo3;
    [SerializeField] GameObject[] Botones;
     [SerializeField]Button[] Boton;
-    [SerializeField] float MaximoV = 3;
-    public Slider sliderInfra, sliderAmbi, sliderPrev;
     private void Awake()
     {
         ML = FindObjectOfType<MonedasLucas>();
-        switch (PlayerPrefs.GetInt("Infra", 0)) {
-            case 0:
-                Boton[0].enabled = true;
-                Boton[1].enabled = true;
-                Boton[2].enabled = true;
-                Botones[9].SetActive(false);
-                Botones[10].SetActive(false);
-                Botones[11].SetActive(false);
-                break;
-            case 1:
-                ML.RestarLucas(0);
-                Boton[0].enabled=false;
-                Botones[9].SetActive(true);
-                break;
-            case 2:
-                ML.RestarLucas(0);
-                Boton[0].enabled = false;
-                Botones[9].SetActive(true);
-                Boton[1].enabled = false;
-                Botones[10].SetActive(true);
-                break;
-            case 3:
-                ML.RestarLucas(0);
-                Boton[0].enabled = false;
-                Botones[9].SetActive(true);
-                Boton[1].enabled = false;
-                Botones[10].SetActive(true);
-                Boton[2].enabled = false;
-                Botones[11].SetActive(true);
-                break;
-        }
-        switch (PlayerPrefs.GetInt("Prev", 0))
-        {
-            case 0:
-                Boton[3].enabled = true;
-                Boton[4].enabled = true;
-                Boton[5].enabled = true;
-                Botones[12].SetActive(false);
-                Botones[13].SetActive(false);
-                Botones[14].SetActive(false);
-                break;
-            case 1:
-                ML.RestarLucas(0);
-                Boton[3].enabled = false;
-                Botones[12].SetActive(true);
-                break;
-            case 2:
-                ML.RestarLucas(0);
-                Boton[3].enabled = false;
-                Botones[12].SetActive(true);
-                Boton[4].enabled = false;
-                Botones[13].SetActive(true);
-                break;
-            case 3:
-                ML.RestarLucas(0);
-                Boton[3].enabled = false;
-                Botones[12].SetActive(true);
-                Boton[4].enabled = false;
-                Botones[13].SetActive(true);
-                Boton[5].enabled = false;
-                Botones[14].SetActive(true);
-                break;
-        }
-        switch (PlayerPrefs.GetInt("Ambi", 0))
-        {
-            case 0:
-                Boton[6].enabled = true;
-                Boton[7].enabled = true;
-                Boton[8].enabled = true;
-                Botones[15].SetActive(false);
-                Botones[16].SetActive(false);
-                Botones[17].SetActive(false);
-                break;
-            case 1:
-                ML.RestarLucas(0);
-                Boton[6].enabled = false;
-                Botones[15].SetActive(true);
-                break;
-            case 2:
-                ML.RestarLucas(0);
-                Boton[7].enabled = false;
-                Boton[6].enabled = false;
-                Botones[15].SetActive(true);
-                Botones[16].SetActive(true);
-                break;
-            case 3:
-                ML.RestarLucas(0);
-                Boton[7].enabled = false;
-                Boton[6].enabled = false;
-                Botones[15].SetActive(true);
-                Botones[16].SetActive(true);
-                Boton[8].enabled = false;
-                Botones[17].SetActive(true);
-                break;
-        }
-
+        InfraRevisar();
+        PrevRevisar();
+        AmbiRevisar();
     }
+
     void Update()
     {
         Debug.Log("INFRA"+ PlayerPrefs.GetInt("Infra", 0));
@@ -193,13 +99,112 @@ public class MejorasTienda : MonoBehaviour
             Boton[5].enabled = false; Botones[14].SetActive(true);
         }
     }
-    private void IniciarSlider()
+    private void AmbiRevisar()
     {
-     /*   sliderInfra = GameObject.FindGameObjectWithTag("SliderInfra").GetComponent<Slider>();
-        sliderPrev = GameObject.FindGameObjectWithTag("SliderAmbi").GetComponent<Slider>();
-        sliderAmbi = GameObject.FindGameObjectWithTag("SliderPrev").GetComponent<Slider>();*/
-        sliderInfra.maxValue = MaximoV;
-        sliderAmbi.maxValue = MaximoV;
-        sliderPrev.maxValue = MaximoV;
+        switch (PlayerPrefs.GetInt("Ambi", 0))
+        {
+            case 0:
+                Boton[6].enabled = true;
+                Boton[7].enabled = true;
+                Boton[8].enabled = true;
+                Botones[15].SetActive(false);
+                Botones[16].SetActive(false);
+                Botones[17].SetActive(false);
+                break;
+            case 1:
+                ML.RestarLucas(0);
+                Boton[6].enabled = false;
+                Botones[15].SetActive(true);
+                break;
+            case 2:
+                ML.RestarLucas(0);
+                Boton[7].enabled = false;
+                Boton[6].enabled = false;
+                Botones[15].SetActive(true);
+                Botones[16].SetActive(true);
+                break;
+            case 3:
+                ML.RestarLucas(0);
+                Boton[7].enabled = false;
+                Boton[6].enabled = false;
+                Botones[15].SetActive(true);
+                Botones[16].SetActive(true);
+                Boton[8].enabled = false;
+                Botones[17].SetActive(true);
+                break;
+        }
     }
+
+    private void PrevRevisar()
+    {
+        switch (PlayerPrefs.GetInt("Prev", 0))
+        {
+            case 0:
+                Boton[3].enabled = true;
+                Boton[4].enabled = true;
+                Boton[5].enabled = true;
+                Botones[12].SetActive(false);
+                Botones[13].SetActive(false);
+                Botones[14].SetActive(false);
+                break;
+            case 1:
+                ML.RestarLucas(0);
+                Boton[3].enabled = false;
+                Botones[12].SetActive(true);
+                break;
+            case 2:
+                ML.RestarLucas(0);
+                Boton[3].enabled = false;
+                Botones[12].SetActive(true);
+                Boton[4].enabled = false;
+                Botones[13].SetActive(true);
+                break;
+            case 3:
+                ML.RestarLucas(0);
+                Boton[3].enabled = false;
+                Botones[12].SetActive(true);
+                Boton[4].enabled = false;
+                Botones[13].SetActive(true);
+                Boton[5].enabled = false;
+                Botones[14].SetActive(true);
+                break;
+        }
+    }
+
+    private void InfraRevisar()
+    {
+        switch (PlayerPrefs.GetInt("Infra", 0))
+        {
+            case 0:
+                Boton[0].enabled = true;
+                Boton[1].enabled = true;
+                Boton[2].enabled = true;
+                Botones[9].SetActive(false);
+                Botones[10].SetActive(false);
+                Botones[11].SetActive(false);
+                break;
+            case 1:
+                ML.RestarLucas(0);
+                Boton[0].enabled = false;
+                Botones[9].SetActive(true);
+                break;
+            case 2:
+                ML.RestarLucas(0);
+                Boton[0].enabled = false;
+                Botones[9].SetActive(true);
+                Boton[1].enabled = false;
+                Botones[10].SetActive(true);
+                break;
+            case 3:
+                ML.RestarLucas(0);
+                Boton[0].enabled = false;
+                Botones[9].SetActive(true);
+                Boton[1].enabled = false;
+                Botones[10].SetActive(true);
+                Boton[2].enabled = false;
+                Botones[11].SetActive(true);
+                break;
+        }
+    }
+  
 }
