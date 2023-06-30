@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class MejorasTienda : MonoBehaviour
 {
     MonedasLucas ML;
-    static int Infra, Ambi, Prev;
     [SerializeField, Tooltip("Cuanto costara la mejora")] int Costo1, Costo2, Costo3;
    [SerializeField] GameObject[] Botones;
     [SerializeField]Button[] Boton;
@@ -89,13 +88,9 @@ public class MejorasTienda : MonoBehaviour
     }
     void Update()
     {
-        if (sliderInfra.value == 0)
-        {
-
-        }
-        Debug.Log("INFRA"+Infra);
-        Debug.Log("Ambi" + Ambi);
-        Debug.Log("Preve" + Prev);
+        Debug.Log("INFRA"+ PlayerPrefs.GetInt("Infra", 0));
+        Debug.Log("Ambi" + PlayerPrefs.GetInt("Ambi", 0));
+        Debug.Log("Preve" + PlayerPrefs.GetInt("Prev", 0));
     }
     public void Infraestructura1()
     {
@@ -180,10 +175,7 @@ public class MejorasTienda : MonoBehaviour
         sliderPrev = GameObject.FindGameObjectWithTag("SliderAmbi").GetComponent<Slider>();
         sliderAmbi = GameObject.FindGameObjectWithTag("SliderPrev").GetComponent<Slider>();*/
         sliderInfra.maxValue = MaximoV;
-        sliderInfra.value = Infra;
         sliderAmbi.maxValue = MaximoV;
-        sliderAmbi.value = Ambi;
         sliderPrev.maxValue = MaximoV;
-        sliderPrev.value = Prev;
     }
 }
