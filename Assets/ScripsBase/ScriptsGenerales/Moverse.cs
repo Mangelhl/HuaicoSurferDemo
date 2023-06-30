@@ -87,14 +87,14 @@ public class Moverse : MonoBehaviour
             Velocidad.SetActive(false);
             
         }
-        if (escudo)
+      /*  if (escudo)
         {
             Escudo.SetActive(true);
         }
         else
         {
             Escudo.SetActive(false);
-        }
+        }*/
         if(iman)
         {
             Iman.SetActive(true);
@@ -118,10 +118,10 @@ public class Moverse : MonoBehaviour
         {
             StartCoroutine(EscuDo());
         }
-        if (other.gameObject.CompareTag("Escudo"))
+       /* if (other.gameObject.CompareTag("Escudo"))
         {
             escudo = true;
-        }
+        }*/
         if (other.gameObject.CompareTag("Turbo") && invulnerable == false)
         {
             StartCoroutine(turBo());
