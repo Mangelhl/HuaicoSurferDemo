@@ -34,7 +34,7 @@ public class MonedasLucas : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("Puntaje Maximo", 0) < 75)
             {
-                PlayerPrefs.SetInt("Puntaje Maximo", PlayerPrefs.GetInt("Puntaje Maximo", 0 + 75));
+                PlayerPrefs.SetInt("Puntaje Maximo", PlayerPrefs.GetInt("Puntaje Maximo", 0) + 75);
             }
         }
 
