@@ -34,6 +34,9 @@ public class MonedasLucas : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             PlayerPrefs.SetInt("Puntaje Maximo", 0);
+            PlayerPrefs.SetInt("Prev", 0);
+            PlayerPrefs.SetInt("Ambi", 0);
+            PlayerPrefs.SetInt("Infra", 0);
             SM.text = "" + 0;
         }
 
