@@ -48,7 +48,10 @@ public class SoundManager : MonoBehaviour
         {
             Play("InGameMusic");
         }
-
+        if (actualSceneName == "ScenePerdiste")
+        {
+            Play("LostClip");
+        }
     }
 
     public void Play(string name)
