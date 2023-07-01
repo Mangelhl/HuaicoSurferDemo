@@ -10,13 +10,15 @@ public class GameManager : MonoBehaviour
     public float tiempoPasado = 0;
     private float cambio = 33;
     public int Puntuacion = 0;
+    public int Puntciviles = 0;
     public int VelocidadGeneral = 100;
     private float ValorAnterior = 0;
     public float Tiempo = 2.5f;
     private Moverse move;
     private GenerarInstancias GI;
-    public MonedasLucas ML; 
-  
+    public MonedasLucas ML;
+    private ScoreManager scoreManager;
+
 
     // Start is called before the first frame update
 
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
     {
         ML = FindObjectOfType<MonedasLucas>();
         move = FindObjectOfType<Moverse>();
+        scoreManager = ScoreManager.GetInstance();
     }
 
     // Update is called once per frame
@@ -54,7 +57,12 @@ public class GameManager : MonoBehaviour
                 move.VelocidadHorizontal = move.VelocidadHorizontal + 2;
                 move.velocidadOriniginal = move.velocidadOriniginal + 2;
             }
-        
+
+        if (scoreManager != null)
+        {
+            scoreManager.AddScore(1);
+        }
+
     }
 
    
