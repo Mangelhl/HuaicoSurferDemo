@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Vidadeljugador : MonoBehaviour
 {
@@ -86,6 +87,11 @@ public class Vidadeljugador : MonoBehaviour
                 life3.SetActive(true);
             }
 
+        }
+
+        if (other.gameObject.CompareTag("Obstaculo") && vida == 0)
+        {
+            SceneManager.LoadScene(2);
         }
     }
 }

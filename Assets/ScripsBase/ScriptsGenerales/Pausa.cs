@@ -26,14 +26,14 @@ public class Pausa : MonoBehaviour
     private void granpausa()
     {
         espausa = !espausa;
-        /*if (espausa)
+        if (espausa)
         {
             Time.timeScale = 0f;
         }
         else
         {
             Time.timeScale = 1f;
-        }*/
+        }
     }
     private void detenermusica()
     {
