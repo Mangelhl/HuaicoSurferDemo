@@ -16,20 +16,12 @@ public class GameManager : MonoBehaviour
     public float Tiempo = 2.5f;
     private Moverse move;
     private GenerarInstancias GI;
-    public CivilSave ML;
+    public MonedasLucas ML;
     private ScoreManager scoreManager;
 
-
-
-    // Start is called before the first frame update
-
-    private void Awake()
-    {
-      
-    }
     void Start()
     {
-        ML = FindObjectOfType<CivilSave>();
+        ML = FindObjectOfType<MonedasLucas>();
         move = FindObjectOfType<Moverse>();
         scoreManager = ScoreManager.GetInstance();
     }
