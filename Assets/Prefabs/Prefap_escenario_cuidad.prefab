@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed209eb40d6e278489744b30af1026ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidadX: 1
+  cantidadX: 2
   cantidadZ: 3
   espacioX: 2
   espacioZ: 2
@@ -138,12 +138,12 @@ MonoBehaviour:
   - {fileID: 1992725502337790902, guid: e7efe08315812e04f9e25486845b331e, type: 3}
   - {fileID: 5733390035495930952, guid: 00eb531470be02c4c82e9dc34536f496, type: 3}
   - {fileID: 5184195113791138854, guid: dc4a9dec4383c1b48b3b2e5aa735a856, type: 3}
-  cantidadInstancias: 3
+  cantidadInstancias: 10
   Tiempo: 0
   TiempoInicio: 0
   paraObstaculos: 0
   Aleatoriedad: 1
-  CantidadDeObstaculosEnElTiempo: 1
+  CantidadDeObstaculosEnElTiempo: 0
   gm: {fileID: 0}
 --- !u!1 &913156649672500389
 GameObject:
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed209eb40d6e278489744b30af1026ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidadX: 1
+  cantidadX: 2
   cantidadZ: 3
   espacioX: 2
   espacioZ: 2
@@ -283,12 +283,12 @@ MonoBehaviour:
   - {fileID: 2540359299916056355, guid: ef4479c8a3efb534faf14f0b7d7cf406, type: 3}
   - {fileID: 8752066964079585624, guid: 2578f4a30e70cd047bcdde00900d7072, type: 3}
   - {fileID: 8578168647236590767, guid: eda9b5aaa76a8d74e8b6393dbd31c28e, type: 3}
-  cantidadInstancias: 3
+  cantidadInstancias: 10
   Tiempo: 0
   TiempoInicio: 0
   paraObstaculos: 0
   Aleatoriedad: 1
-  CantidadDeObstaculosEnElTiempo: 1
+  CantidadDeObstaculosEnElTiempo: 0
   gm: {fileID: 0}
 --- !u!1 &913156650835681850
 GameObject:
@@ -638,7 +638,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801494423134799997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7158933, y: 21.509998, z: -3.5}
+  m_LocalPosition: {x: -4, y: 21.509998, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

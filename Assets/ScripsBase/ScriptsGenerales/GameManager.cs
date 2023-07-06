@@ -39,11 +39,11 @@ public class GameManager : MonoBehaviour
     {
             tiempoPasado += Time.deltaTime;
 
-            if (tiempoPasado > ValorAnterior && ML.NPS == true)
+            /*if (tiempoPasado > ValorAnterior && ML.NPS == true)
             {
             Puntuacion = Puntuacion + 2;
             ValorAnterior = ValorAnterior + 2;
-            }
+            }*/
 
             if (tiempoPasado > ValorAnterior)
 
