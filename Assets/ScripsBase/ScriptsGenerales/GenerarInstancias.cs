@@ -37,6 +37,23 @@ public class GenerarInstancias : MonoBehaviour
                 GenerarInstanciasAleatorias();
             }
         }
+        switch (PlayerPrefs.GetInt("Prev", 0)) 
+        {
+            case 0:
+                break;
+            case 1:
+                Tiempo = 3;
+                break;
+            case 2:
+                Tiempo = 5;
+                break;
+            case 3:
+                Tiempo = 6.5f;
+                prefabs[6].SetActive(false);
+                break;
+        }
+        if (PlayerPrefs.GetInt("Prev", 0) > 2)
+        { prefabs[0].SetActive(false); }
     }
     private void Update()
     {

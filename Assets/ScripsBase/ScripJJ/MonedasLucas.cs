@@ -10,6 +10,8 @@ public class MonedasLucas : MonoBehaviour
     public bool NPS;
     [SerializeField] private float Timex2T;
     [SerializeField] private bool D;
+   
+
 
     private void Awake()
     {
@@ -17,6 +19,7 @@ public class MonedasLucas : MonoBehaviour
         if (D == false)
         {
             SM = GameObject.FindGameObjectWithTag("Lucas").GetComponent<TMP_Text>();
+          
         }
         }
     void Start()

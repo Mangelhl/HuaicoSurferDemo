@@ -15,6 +15,7 @@ TagManager:
   - SliderInfra
   - Rampa
   - Victimas
+  - Distancia
   layers:
   - Default
   - TransparentFX
