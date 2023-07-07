@@ -46,16 +46,16 @@ public class Disparador : MonoBehaviour
         }
         while (Gm.tiempoPasado > 100)
         {
-            Tiempo = 110.0f / Gm.VelocidadGeneral;
+            Tiempo = 100.0f / Gm.VelocidadGeneral;
             Instantiate(ObjetoInstanciadoPueblo, transform.position, transform.rotation);
             yield return new WaitForSeconds(Tiempo);
-            Tiempo = 110.0f / Gm.VelocidadGeneral;
+            Tiempo = 100.0f / Gm.VelocidadGeneral;
         }
      
     }
     void Update()
     {
-        Tiempo = 95.0f / Gm.VelocidadGeneral;
+        
     }
 
     // Update is called once per frame

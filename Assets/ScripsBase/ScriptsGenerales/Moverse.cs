@@ -22,7 +22,7 @@ public class Moverse : MonoBehaviour
     private float EstaEnSUelo = -0.74f;
     private float MaximoEnAire = 18f;
     private float tiempoSubida = 2f;
-    private float tiempoQuieto = 2f;
+    private float tiempoQuieto = 0.5f;
     private float tiempoBajada = 2f;
 
 

@@ -13,6 +13,7 @@ public class MonedasLucas : MonoBehaviour
 
     private void Awake()
     {
+        NPS = false;
         if (D == false)
         {
             SM = GameObject.FindGameObjectWithTag("Lucas").GetComponent<TMP_Text>();
@@ -25,6 +26,7 @@ public class MonedasLucas : MonoBehaviour
             SM.text = " " + PlayerPrefs.GetInt("Puntaje Maximo", 0).ToString();
         }
     }
+    
     private void Update()
     {
 
