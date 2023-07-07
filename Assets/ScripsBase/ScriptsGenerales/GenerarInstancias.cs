@@ -18,6 +18,7 @@ public class GenerarInstancias : MonoBehaviour
     private float cambioMayor = 100f;
     void Start()
     {
+        
         EnBosque = true;
         gm = FindObjectOfType<GameManager>();
         plano = GetComponent<DividirPlano>();
