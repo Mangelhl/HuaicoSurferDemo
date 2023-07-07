@@ -10,8 +10,8 @@ public class MonedasLucas : MonoBehaviour
     public bool NPS;
     [SerializeField] private float Timex2T;
     [SerializeField] private bool D;
-   
 
+    Animator HUDVA;
 
     private void Awake()
     {
@@ -19,9 +19,9 @@ public class MonedasLucas : MonoBehaviour
         if (D == false)
         {
             SM = GameObject.FindGameObjectWithTag("Lucas").GetComponent<TMP_Text>();
-          
+            HUDVA = GameObject.FindGameObjectWithTag("Distancia").GetComponent<Animator>();
         }
-        }
+    }
     void Start()
     {
         if (D == false)
@@ -29,7 +29,6 @@ public class MonedasLucas : MonoBehaviour
             SM.text = " " + PlayerPrefs.GetInt("Puntaje Maximo", 0).ToString();
         }
     }
-    
     private void Update()
     {
 
@@ -47,9 +46,9 @@ public class MonedasLucas : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            
-                PlayerPrefs.SetInt("Puntaje Maximo", PlayerPrefs.GetInt("Puntaje Maximo", 0) + 75);
-           
+
+            PlayerPrefs.SetInt("Puntaje Maximo", PlayerPrefs.GetInt("Puntaje Maximo", 0) + 75);
+
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -90,7 +89,9 @@ public class MonedasLucas : MonoBehaviour
     IEnumerator PlusScore()
     {
         NPS = true;
+        HUDVA.SetBool("X2", true);
         yield return new WaitForSeconds(Timex2T);
+        HUDVA.SetBool("X2", false);
         NPS = false;
     }
 }
